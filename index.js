@@ -69,7 +69,6 @@ const products = [
       "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric.",
   },
 ];
-export default products;
 
 // load layout file
 
