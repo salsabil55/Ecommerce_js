@@ -1,5 +1,5 @@
 // import products from "./products.js";
-// import cart from "./cart.js";
+import cart from "./cart.js";
 let app = document.getElementById("app");
 let tempararyContent = document.getElementById("tempararyContent");
 
@@ -80,7 +80,7 @@ const loadTemplate = () => {
       let contentTab = document.getElementById("contentTab");
       contentTab.innerHTML = tempararyContent.innerHTML;
       tempararyContent.innerHTML = null;
-      // cart();
+      cart();
       initApp();
     });
 };
