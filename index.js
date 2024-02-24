@@ -1,12 +1,12 @@
-import products from "/products.js";
-import cart from "/cart.js";
+import products from "./products.js";
+import cart from "./cart.js";
 let app = document.getElementById("app");
 let tempararyContent = document.getElementById("tempararyContent");
 
 // load layout file
 
 const loadTemplate = () => {
-  fetch("/template.html")
+  fetch("./template.html")
     .then((response) => response.text())
     .then((html) => {
       app.innerHTML = html;
