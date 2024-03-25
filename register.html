@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Shopping Cart</title>
+    <title>Register</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/register.css" />
   </head>
   <body>
     <div class="container">
@@ -75,7 +75,7 @@
         <div class="middle-section">
           <nav>
             <ul>
-              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Home</a></li>
               <li><a href="#">shop</a></li>
               <li><a href="#">Womn</a></li>
               <li><a href="#">Men</a></li>
@@ -105,7 +105,17 @@
                 <span class="badge"></span>
               </a>
             </li>
-          
+            <li class="shopping_cart_items hide">
+              <div class="shopping-cart-title">
+                <p class="shopping-cart-title">Item</p>
+                <p class="shopping-cart-countity">Countity</p>
+                <p class="shopping-cart-price">Price</p>
+              </div>
+              <div class="shopping-cart-data"></div>
+              <div class="see-products">
+                <a href="product.html">See All Products</a>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -150,85 +160,23 @@
       </div>
     </section>
 
-    <!-- home-content -->
-    <!-- banner section -->
-    <section class="home-content">
-      <aside>
-        <!-- section category -->
-        <section class="category">
-          <div class="category-menu">
-            <ul>
-              <li class="category-title">Categories</li>
-              <li>
-                Women
-                <span
-                  ><svg
-                    class="w-6 h-6 text-gray-800 dark:text-white"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m8 10 4 4 4-4"
-                    /></svg
-                ></span>
-              </li>
-              <li>Men</li>
-              <li>Electricty</li>
-              <li>Watch</li>
-              <li>Electricty</li>
-              <li>Watch</li>
-              <li>Electricty</li>
-              <li>Watch</li>
-            </ul>
-          </div>
-        </section>
-      </aside>
-      <!-- <main> -->
-      <section class="banner">
-        <img src="./design/assets (1)/assets/slider/slider0.jpg" />
-        <div class="banner-text">
-          <span>New Offer</span>
-          <h2>Come And Get it</h2>
-          <h1>50% For This Item</h1>
-          <button>Shop Now</button>
-        </div>
-      </section>
-      <!-- </main> -->
+    <!-- Login-content -->
+   
     </section>
-    <div class="brands">
-      <div class="logos_img">
-        <img src="./img/brands/asus.png" />
-        <img src="./img/brands/dng.png" />
-        <img src="./img/brands/hurley.png" />
-        <img src="./img/brands/oppo.png" />
-        <img src="./img/brands/samsung.png" />
-        <img src="./img/brands/zara.png" />
-      </div>
-    </div>
-    <!--trending-product  -->
-    <section class="trending-product">
-      <aside>
-        <div class="side-menu">
-          <div class="side-block">
-            <div class="side-block-text">
-              <p>ON SALE</p>
-              <span>04:06:00</span>
-            </div>
-            <div class="side-block-content">
-              <img src="./img/products/apparel4.jpg" />
-            </div>
-          </div>
-        </div>
-      </aside>
-      <main>
-        <div class="item-container"></div>
-      </main>
+    <!-- section-form -->
+    <section class="section-form">
+      <h2>Register Your Account</h2>
+      <form>
+        <input type="text" placeholder="Enter your nme ..." id="username" />
+        <input type="email" placeholder="Enter your email ..." id="email" />
+        <input
+          type="password"
+          placeholder="Enter your pssword.."
+          id="password"
+        />
+        <button type="submit" id="sign_up">Sign up</button>
+      </form>
+     
     </section>
     <footer>
       <div class="footer">
@@ -245,23 +193,6 @@
       </div>
     </footer>
     </div>
-    
-    <div class="shopping_cart_items">
-      <div class="shopping-cart-title">
-       <h1>Shopping Cart
-      </h1>
-      </div>
-      <div class="shopping-cart-data">
-        <div class="list-cart"></div>
-
-      </div>
-      <div class="btn">
-        <button class="close">CLOSE</button>
-        <button class="checkOut"><a href="product.html"> CHECKOUT</a></button>
-      </div>
-    </div>
-    <script src="js/data.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/register.js"></script>
   </body>
 </html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+      <section class="top-section">
+        <div class="offer-text">
+          <p>
+            Get extra offer 15% when use this CODE:4DE45 first time when login
+          </p>
+        </div>
+        <div class="account-section">
+          <nav>
+            <ul id="links">
+              <svg
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                    clip-rule="evenodd"
+                  />
+              <li>
+                <a href="login.html">Log in Account</a>
+              </li>
+            </ul>
+            <ul id="user_info">
+              <li class="user_data">
+                <svg
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+  
+                <a href="#" id="user"></a>
+              </li>
+              <li>
+                <a href="login.html" id="logout"
+                  ><i class="ri-logout-box-r-line"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <header>
+        <div class="branding">
+          <!-- logo-section -->
+          <div class="left-section">
+            <a href="index.html" class="logo">MAX<span>DEAL</span></a>
+          </div>
+          <div class="middle-section">
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="#">Womn</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Sports</a><span>New</span></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- shopping-section -->
+          <div class="right-section">
+            <ul>
+              <li>
+                <a href="#" class="shop-icon">
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 18 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
+                    />
+                  </svg>
+                  <span class="badge"></span>
+                </a>
+              </li>
+              <li class="shopping_cart_items hide">
+                <div class="shopping-cart-title">
+                  <p class="shopping-cart-title">Item</p>
+                  <p class="shopping-cart-countity">Countity</p>
+                  <p class="shopping-cart-price">Price</p>
+                </div>
+                <div class="shopping-cart-data"></div>
+                <div class="see-products">
+                  <a href="product.html">See All Products</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <section class="depart-sec">
+        <div class="right-menu">
+          <div class="toggle-menu">
+            <h2>
+              All Departments
+              <span
+                ><svg
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="M5 7h14M5 12h14M5 17h10"
+                  /></svg
+              ></span>
+            </h2>
+            <p>Total 200 products</p>
+          </div>
+        </div>
+        <!-- search-box -->
+        <div class="middle-section">
+          <div class="search-box">
+            <form>
+              <input
+                type="search"
+                id="searchInput"
+                placeholder="search...."
+              /><button type="button" id="searchButton">
+                <i class="ri-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Login-content -->
+     
+      </section>
+    <!-- section form -->
+    <section class="section-form">
+      <h2>Login Your Account</h2>
+      <form>
+        <input type="text" placeholder="Enter your name ..." id="username" />
+        <input
+          type="password"
+          placeholder="Enter your pssword.."
+          id="password"
+        />
+        <input
+          type="password"
+          placeholder="Enter your pssword.."
+          id="password" class="visible-hide"
+        />
+        <button type="submit" id="login" >Log in</button>
+        <a></a>
+      </form>
+      <div class="msg-block">
+        <p class="msg_txt"></p>
+      </div>
+      
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="center-sec">
+          <p><i class="ri-copyright-fill"></i> All copy right reserved 2024</p>
+          <div class="social-media">
+            <a href="#"><i class="ri-facebook-circle-line"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-google-line"></i></a>
+
+          </div>
+        </div>
+       
+      </div>
+    </footer>
+    <script src="js/login.js"></script>
+  </body>
+</html>
