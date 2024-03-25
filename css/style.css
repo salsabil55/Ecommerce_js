@@ -737,6 +737,20 @@ span.old-price {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+  .container {
+    width: fit-content;
+  }
+  .offer-text {
+    padding: 0;
+  }
+  .depart-sec {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 60px;
+  }
+  .search-box {
+    margin-top: 30px;
+  }
   .activeTab button.add-to-cart span {
     display: none;
   }
