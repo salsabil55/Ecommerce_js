@@ -824,6 +824,9 @@ span.old-price {
   section.home-content {
     width: 100%;
   }
+  .trend-content {
+    flex-wrap: wrap;
+  }
   /* aside {
     width: 80%;
     margin: auto;
