@@ -5,6 +5,7 @@ let logout = document.querySelector("#logout");
 let iconCart = document.querySelector(".right-section .shop-icon");
 let itemContainerContent = document.querySelector(".item-container");
 let user_value = localStorage.getItem("username");
+let main_content = document.getElementById("main_content");
 // let add_to_cart_btn = document.querySelector(".add-to-cart");
 let add_to_cart_btn = document.querySelectorAll(".item-action .add-to-cart");
 let activeTab = document.querySelector("body.activeTab");
@@ -17,20 +18,6 @@ let isCartHidden = true;
 iconCart.addEventListener("click", () => {
   body.classList.toggle("activeTab");
 });
-
-// check login
-
-// iconCart.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   if (localStorage.getItem("username")) {
-//     isCartHidden = !isCartHidden;
-//     // shopping_cart_items.classList.toggle("grid");
-//     // shopping_cart_items.classList.toggle("hide");
-//     body.classList.toggle("activeTab");
-//   } else {
-//     window.location = "login.html";
-//   }
-// });
 
 if (activeTab) {
   add_to_cart_btn.textContent = "";
@@ -120,6 +107,7 @@ const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", () => {
   const searchQuery = searchInput.value.trim();
   renderProducts(searchQuery);
+  main_content.scrollIntoView({ behavior: "smooth" }); // This will scroll smoothly to the top of the topSection
 });
 
 // Initial rendering of all products
@@ -131,3 +119,25 @@ function saveProductId(id) {
   window.location = "productDetail.html";
   // window.location.href = `productDetail.html/${id}`;
 }
+
+// toggle menu btn
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("toggle-button");
+  const menu = document.getElementById("menu");
+  const openMenu = document.querySelector(".toggle-menu .open-icon");
+  const closeMenu = document.querySelector(".toggle-menu .close-icon");
+  const sidemenu = document.querySelector("aside");
+  const banner = document.querySelector("section.banner");
+
+  toggleButton.addEventListener("click", function () {
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("hidden");
+      menu.classList.add("visible");
+      banner.classList.remove("full");
+    } else {
+      menu.classList.remove("visible");
+      menu.classList.add("hidden");
+      banner.classList.add("full");
+    }
+  });
+});

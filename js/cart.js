@@ -3,6 +3,7 @@ let listCart = shopping_cart_data.querySelector(".list-cart");
 // let iconCart = document.querySelector(".right-section .shop-icon");
 let iconCartSpan = document.querySelector(".badge");
 let shopping_cart_items = document.querySelector(".shopping_cart_items");
+let topSection = document.getElementById("top-section");
 let closeList = document.querySelector(".close");
 // let body = document.querySelector("body");
 let cart = [];
@@ -15,29 +16,6 @@ closeList.addEventListener("click", () => {
   body.classList.toggle("activeTab");
 });
 
-// setProductInCart
-// const setProductInCart = (productId, item) => {
-//   let positionProductInCart = cart.findIndex(
-//     (item) => item.product_id == productId
-//   );
-//   let prodName = products[positionProductInCart].title;
-//   let img = products[positionProductInCart].imageUrl;
-//   console.log(prodName, img);
-//   if (item <= 0) {
-//     cart.splice(positionProductInCart, 1);
-//   } else if (positionProductInCart < 0) {
-//     cart.push({
-//       product_id: productId,
-//       prodName: prodName,
-//       img: img,
-//       quantity: 1,
-//     });
-//   } else {
-//     cart[positionProductInCart].quantity = item;
-//   }
-//   localStorage.setItem("cart", JSON.stringify(cart));
-//   addCartToList();
-// };
 const setProductInCart = (
   productId,
   item,
@@ -49,11 +27,6 @@ const setProductInCart = (
   let positionProductInCart = cart.findIndex(
     (item) => item.product_id == productId
   );
-
-  // if (positionProductInCart !== -1) {
-  //   let prodName = products[positionProductInCart].title;
-  //   let img = products[positionProductInCart].imageUrl;
-  // }
 
   if (item <= 0) {
     cart.splice(positionProductInCart, 1);
@@ -108,6 +81,7 @@ const addCartToList = () => {
     });
   }
   iconCartSpan.innerText = totalQuantity;
+  topSection.scrollIntoView({ behavior: "smooth" }); // This will scroll smoothly to the top of the topSection
 };
 // hndle ny cutton clicked in ny pge
 document.addEventListener("click", (event) => {

@@ -86,3 +86,41 @@ function drawthumb(thumbnil = []) {
   thumb_img.innerHTML = thumb;
 }
 drawthumb();
+
+// slider
+document.addEventListener("DOMContentLoaded", function () {
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  const sliderWrapper = document.querySelector(".slider-wrapper");
+  const slides = document.querySelectorAll(".slide");
+  const thumbnails = document.querySelectorAll(".thumbnails img");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const offset = -index * 100;
+    sliderWrapper.style.transform = `translateX(${offset}%)`;
+  }
+
+  function showNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function showPrevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  nextButton.addEventListener("click", showNextSlide);
+  prevButton.addEventListener("click", showPrevSlide);
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Auto slide (optional)
+  setInterval(showNextSlide, 3000);
+});
