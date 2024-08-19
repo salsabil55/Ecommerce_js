@@ -422,6 +422,7 @@ header ul li span {
   margin-top: 25px;
   height: 100vh;
   overflow-y: auto;
+  flex-wrap: wrap;
 }
 .trend-title {
   display: flex;
@@ -781,6 +782,20 @@ span.old-price {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+  .trend-content aside {
+    width: 100%;
+    text-align: left;
+  }
+  .trend-content {
+    flex-wrap: wrap;
+  }
+  .item-action button {
+    font-size: 10px;
+  }
+  .logos_img {
+    margin: auto;
+    text-align: center;
+  }
   .activeTab button.add-to-cart span {
     display: none;
   }
@@ -824,9 +839,7 @@ span.old-price {
   section.home-content {
     width: 100%;
   }
-  .trend-content {
-    flex-wrap: wrap;
-  }
+
   /* aside {
     width: 80%;
     margin: auto;
