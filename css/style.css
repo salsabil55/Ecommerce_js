@@ -852,4 +852,13 @@ span.old-price {
   section.home-content {
     width: 100%;
   }
+  .offer-text {
+    padding-left: 0;
+  }
+  .offer-text p {
+    font-size: 1rem;
+  }
+  ul#links li a {
+    font-size: 1rem;
+  }
 }
