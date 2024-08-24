@@ -44,6 +44,7 @@ body.activeTab .container {
   background-color: hsl(0, 0%, 90%);
   height: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid lightgrey;
   align-self: center;
@@ -823,10 +824,11 @@ span.old-price {
   }
   ul#links li a {
     font-size: 1.1rem;
-    margin: 0 3px;
+    margin: 0 10px;
   }
   .offer-text p {
     font-size: 1.1rem;
+    letter-spacing: 0.6px;
   }
   .top-section {
     padding: 0 10px;
@@ -859,9 +861,10 @@ span.old-price {
     font-size: 1rem;
   }
   ul#links li a {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .top-section {
-    padding: 0px 0px;
+    justify-content: center;
+    line-height: normal;
   }
 }
