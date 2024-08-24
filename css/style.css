@@ -861,4 +861,7 @@ span.old-price {
   ul#links li a {
     font-size: 1rem;
   }
+  .top-section {
+    padding: 0px 0px;
+  }
 }
