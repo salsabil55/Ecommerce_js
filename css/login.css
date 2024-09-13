@@ -1,14 +1,5 @@
 /* login section */
-section.section-form {
-  text-align: center;
-  width: 60%;
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: auto;
-}
+
 section.section-form form {
   width: 100%;
 }

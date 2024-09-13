@@ -13,6 +13,24 @@ let body = document.querySelector("body");
 
 let isCartHidden = true;
 
+// toggle menu btn
+const toggleButton = document.getElementById("toggle");
+const menu = document.getElementById("menu");
+const banner = document.querySelector("section.home-content");
+toggleButton.addEventListener("click", function () {
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+    menu.classList.add("visible");
+    menu.classList.add("prod-det");
+    banner.classList.remove("full");
+  } else {
+    menu.classList.remove("visible");
+    menu.classList.remove("prod-det");
+    menu.classList.add("hidden");
+    banner.classList.add("full");
+  }
+});
+
 // close & open TabCart
 
 iconCart.addEventListener("click", () => {
@@ -119,25 +137,3 @@ function saveProductId(id) {
   window.location = "productDetail.html";
   // window.location.href = `productDetail.html/${id}`;
 }
-
-// toggle menu btn
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.getElementById("toggle-button");
-  const menu = document.getElementById("menu");
-  const openMenu = document.querySelector(".toggle-menu .open-icon");
-  const closeMenu = document.querySelector(".toggle-menu .close-icon");
-  const sidemenu = document.querySelector("aside");
-  const banner = document.querySelector("section.banner");
-
-  toggleButton.addEventListener("click", function () {
-    if (menu.classList.contains("hidden")) {
-      menu.classList.remove("hidden");
-      menu.classList.add("visible");
-      banner.classList.remove("full");
-    } else {
-      menu.classList.remove("visible");
-      menu.classList.add("hidden");
-      banner.classList.add("full");
-    }
-  });
-});

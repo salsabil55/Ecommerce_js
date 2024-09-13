@@ -8,7 +8,7 @@ let closeList = document.querySelector(".close");
 // let body = document.querySelector("body");
 let cart = [];
 let quantity = null;
-
+iconCartSpan.innerText = 0;
 // iconCart.addEventListener("click", () => {
 //   body.classList.toggle("activeTab");
 // });

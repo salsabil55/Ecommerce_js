@@ -61,6 +61,8 @@ function saveItemId(id) {
 // get product detil
 let content = document.querySelector(".listProduct");
 let prodId = localStorage.getItem("itemDetId");
+let num = 0;
+
 let thisProduct = products.filter((value) => value.id == prodId)[0];
 
 let product_content = document.querySelector(".product-detail-section");
@@ -68,59 +70,55 @@ product_content.querySelector(".big-img img").src = thisProduct.imageUrl;
 let product_description = document.querySelector(".product-description");
 product_description.querySelector(".title h2").innerText = thisProduct.title;
 product_description.querySelector(".price").innerText = "$" + thisProduct.price;
+product_description.querySelector(".prod-info").innerText =
+  "There is some information about " + thisProduct.title;
 product_description.querySelector(".addCart").dataset.id = prodId;
 product_description.querySelector(".minus").dataset.id = prodId;
 product_description.querySelector(".plus").dataset.id = prodId;
-// product_description.querySelector(".quantity_num").innerText =
-//   thisProduct.quantity;
+
+product_description.querySelector(".quantity_num").innerText = num;
+product_description
+  .querySelector(".plus")
+  .addEventListener("click", (event) => {
+    num++;
+    product_description.querySelector(".quantity_num").innerText = num;
+  });
+product_description
+  .querySelector(".minus")
+  .addEventListener("click", (event) => {
+    num--;
+    product_description.querySelector(".quantity_num").innerText = num;
+    if (num < 0) {
+      product_description.querySelector(".quantity_num").innerText = 0;
+    }
+  });
 
 // drw thum
 function drawthumb(thumbnil = []) {
-  let thumb_img = document.querySelector(".thumb-img");
+  let thumb_img = document.querySelector(".image-gallery");
   let thumbs = thisProduct.thumbs;
   let thumb = thumbs.map((thumb) => {
-    return `<div class="item-card-img">
-    <a ><img src="${thumb.url}" class="zoom-img"/></a>
-    </div>`;
+    return `  <div class="thumbnail-container"><div class="item-card-img">
+    <a><img src="${thumb.url}" class="zoom-img thumbnail"/></a>
+    </div></div>`;
   });
   thumb_img.innerHTML = thumb;
 }
 drawthumb();
 
-// slider
+// script.js
 document.addEventListener("DOMContentLoaded", function () {
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-  const sliderWrapper = document.querySelector(".slider-wrapper");
-  const slides = document.querySelectorAll(".slide");
-  const thumbnails = document.querySelectorAll(".thumbnails img");
-  let currentIndex = 0;
+  const mainImage = document.getElementById("main-image");
+  const thumbnails = document.querySelectorAll(".thumbnail");
 
-  function showSlide(index) {
-    const offset = -index * 100;
-    sliderWrapper.style.transform = `translateX(${offset}%)`;
-  }
-
-  function showNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  }
-
-  function showPrevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-  }
-
-  nextButton.addEventListener("click", showNextSlide);
-  prevButton.addEventListener("click", showPrevSlide);
-
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener("click", () => {
-      currentIndex = index;
-      showSlide(currentIndex);
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", function () {
+      mainImage.classList.add("hidden"); // Start fade out
+      setTimeout(() => {
+        mainImage.src = this.src; // Change image source
+        mainImage.alt = this.alt; // Update alt attribute
+        mainImage.classList.remove("hidden"); // Fade in new image
+      }, 200); // Match the duration of CSS transition
     });
   });
-
-  // Auto slide (optional)
-  setInterval(showNextSlide, 3000);
 });

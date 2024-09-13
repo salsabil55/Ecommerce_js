@@ -7,9 +7,9 @@ let products = [
     imageUrl: "img/products/shoe1.jpg",
     stock: "2",
     thumbs: [
-      { thum_id: 1, url: "img/products/shoe1.jpg" },
-      { thum_id: 2, url: "img/products/shoe2.jpg" },
-      { thum_id: 3, url: "img/products/shoe1.jpg" },
+      { thum_id: 1, url: "img/products/shoe1-2.jpg" },
+      { thum_id: 2, url: "img/products/shoe1.jpg" },
+      { thum_id: 3, url: "img/products/shoe3.jpg" },
     ],
   },
   {
