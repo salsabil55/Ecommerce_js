@@ -947,6 +947,9 @@ button.submit-btn {
     margin-top: 55px;
     width: 100%;
   }
+  .brands {
+    width: 100%;
+  }
   .item-container {
     height: 1100px;
     overflow: hidden;
@@ -1058,6 +1061,13 @@ button.submit-btn {
   }
   .branding {
     padding: 0;
+  }
+  .depart-sec {
+    padding: 0;
+    height: 2px;
+  }
+  .middle-section {
+    display: none;
   }
   .item-container {
     height: 1000px;
