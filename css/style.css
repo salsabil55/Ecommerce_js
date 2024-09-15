@@ -592,9 +592,9 @@ span.stock {
   padding: 10px 10px;
   line-height: 0px;
   align-self: center;
-  background-color: white;
   border-radius: 5px;
-  border: 1px solid #453c5a;
+  background-color: #d3d3d3;
+  border: none;
   cursor: pointer;
   font-size: 13px;
   align-items: center;
@@ -909,6 +909,15 @@ button.submit-btn {
   color: #253745;
   box-shadow: 0 5px 13px -5px black;
 }
+.menu-icon {
+  display: none;
+}
+.left-section {
+  display: flex;
+}
+.mobil-top-section {
+  display: none;
+}
 /* responsive */
 
 @media only screen and (max-width: 1200px) {
@@ -937,6 +946,10 @@ button.submit-btn {
     margin: 0;
     margin-top: 55px;
     width: 100%;
+  }
+  .item-container {
+    height: 1100px;
+    overflow: hidden;
   }
   section.section-form {
     width: 100%;
@@ -975,7 +988,7 @@ button.submit-btn {
     flex-wrap: wrap;
   }
   .item-action button {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .activeTab button.add-to-cart span {
@@ -1022,7 +1035,17 @@ button.submit-btn {
   section.home-content {
     width: 100%;
   }
-
+  .toggle-menu {
+    width: 140px;
+    margin-left: -5px;
+    padding-left: 4px;
+    height: 65px;
+    padding-top: 1px;
+    margin-top: 30px;
+  }
+  .toggle-menu h2 {
+    font-size: 1rem;
+  }
   /* aside {
     width: 80%;
     margin: auto;
@@ -1033,8 +1056,19 @@ button.submit-btn {
     right: -1000px;
     width: 100%;
   }
+  .branding {
+    padding: 0;
+  }
+  .item-container {
+    height: 1000px;
+    overflow: hidden;
+  }
   .toggle-menu {
     display: none;
+  }
+
+  svg {
+    width: 14px;
   }
   .right-section {
     margin-right: 0;
@@ -1044,7 +1078,8 @@ button.submit-btn {
   }
   .item-action button {
     height: 25px;
-    padding: 8px 7px;
+    padding: 18px 20px;
+    font-size: 11px;
   }
   header {
     padding: 0 10px;
@@ -1056,13 +1091,13 @@ button.submit-btn {
     width: 93%;
   }
   .item-card-info {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .item-card-info .item-price p {
     font-size: 1.3rem;
   }
   .item-card-img img {
-    width: 100px;
+    width: 130px;
     height: 130px;
   }
   .account-section {
@@ -1080,7 +1115,23 @@ button.submit-btn {
     font-size: 1.1rem;
   }
   .top-section {
-    justify-content: center;
-    line-height: normal;
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-right: 20px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .item-action button {
+    height: 25px;
+    padding: 12px 10px;
+    font-size: 11px;
+  }
+  .item-container {
+    height: 1100px;
+    overflow: hidden;
   }
 }

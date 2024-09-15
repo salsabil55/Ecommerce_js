@@ -58,14 +58,29 @@ logout.addEventListener("click", function (e) {
   }, 1500);
 });
 // poductui
+// function drawProductsUI() {
+//   let productsUI = products.map((product) => {
+//     return `<div class="item-card" id="productList"></div>`;
+//   });
+//   itemContainerContent.innerHTML = productsUI;
+// }
+
+// drawProductsUI();
+
 function drawProductsUI() {
-  let productsUI = products.map((product) => {
-    return `<div class="item-card" id="productList">
-    
-  </div>`;
-  });
-  itemContainerContent.innerHTML = productsUI;
+  let productsUI = products
+    .map((product) => {
+      return `
+      <div class="item-card" id="productList">
+       
+      </div>
+    `;
+    })
+    .join(""); // Join the array into a string
+
+  itemContainerContent.innerHTML = productsUI; // Assign it to innerHTML
 }
+
 drawProductsUI();
 
 // shopping-cart-data dr
